@@ -2,6 +2,9 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
+require 'lua.custom.config'
+require 'lua.custom.mapping'
+
 -- gruvbox config
 vim.g.gruvbox_contrast_dark = 'medium'
 vim.g.gruvbox_vert_split = 'bg0'
