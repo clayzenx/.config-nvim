@@ -1,3 +1,7 @@
+function FixEslint()
+  vim.cmd '!npx eslint --fix %'
+end
+
 -- Exit insert mode
 vim.keymap.set('i', 'jj', '<Esc>')
 
@@ -12,3 +16,6 @@ vim.keymap.set('n', ']h', ':Gitsigns next_hunk<CR>', { desc = 'Gitsigns Go to ne
 
 vim.keymap.set('n', 'gtd', ':Gitsigns diffthis<CR>', { desc = 'Gitsigns [D]iff this' })
 vim.keymap.set('n', 'gtb', ':Gitsigns blame_line<CR>', { desc = 'Gitsigns [R]eset hunk' })
+
+-- execute FixEslint
+vim.keymap.set('n', '<leader>l', FixEslint, { desc = 'Es[L]int fix' })
